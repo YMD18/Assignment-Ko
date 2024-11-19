@@ -1,0 +1,48 @@
+<!-- Modal -->
+<div class="modal fade" id="staticBackdropedit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true" data-id="">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Stock In / Stock Out</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form method="post" id="form-edit-stock">
+        <div class="modal-body">
+          <div id="quantity" class="mb-2">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" name="quantity" />
+            <div class="invalid-feedback"></div>
+          </div>
+
+          <div id="status" class="mb-2">
+            <label for="status" class="form-label">Status</label>
+            <div class="d-flex gap-2">
+              <input type="radio" class="stocks" value="in" name="status" id="stockin" checked>
+              <label for="stockin">Stock In</label>
+              <input type="radio" class="stocks" value="out" name="status" id="stockout">
+              <label for="stockout">Stock Out</label>
+            </div>
+            <div class="invalid-feedback"></div>
+          </div>
+
+          <div id="reason" class="mb-2 d-none">
+            <label for="price" class="form-label">Reason</label>
+            <textarea class="form-control" name="reason" cols="30"></textarea>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary brand-bg-color">
+            Save Stocks
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../js/stocks.js"></script>
